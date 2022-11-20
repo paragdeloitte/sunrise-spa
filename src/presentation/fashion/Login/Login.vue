@@ -19,6 +19,9 @@
         <div class="col-lg-6 col-md-6">
           <SignUpForm />
         </div>
+        <div>
+          <GoogleLoginForm />
+        </div>
       </div>
     </div>
   </div>
