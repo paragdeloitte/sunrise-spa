@@ -27,17 +27,25 @@ const config = {
       scope:
         getEnv('VUE_APP_CT_SCOPE') ||
         'manage_my_orders:sunrise-spa ' +
-          'manage_my_profile:sunrise-spa ' +
-          'manage_my_payments:sunrise-spa ' +
-          'view_published_products:sunrise-spa ' +
-          'view_categories:sunrise-spa ' +
-          'manage_my_shopping_lists:sunrise-spa ' +
-          'manage_orders:sunrise-spa ' +
-          'create_anonymous_token:sunrise-spa',
+        'manage_my_profile:sunrise-spa ' +
+        'manage_my_payments:sunrise-spa ' +
+        'view_published_products:sunrise-spa ' +
+        'view_categories:sunrise-spa ' +
+        'manage_my_shopping_lists:sunrise-spa ' +
+        'manage_orders:sunrise-spa ' +
+        'create_anonymous_token:sunrise-spa',
     },
     api:
       getEnv('VUE_APP_CT_API_HOST') ||
       'https://api.europe-west1.gcp.commercetools.com',
+  },
+  gsi: {
+    auth: {
+      credentials: {
+        clientId: getEnv('VUE_APP_GSI_CLIENT_ID'),
+      },
+    },
+    clientLibraryUrl: getEnv('VUE_APP_GSI_CLIENT_LIBRARY_URL'),
   },
   languages: {
     en: 'English',
